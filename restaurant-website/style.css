@@ -8,11 +8,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    min-height: 100vh;
-    transition: background-color 0.3s ease;
-}
-
 :root {
     --bg: #1a0a08;
     --dark: #40110B;
@@ -24,12 +19,21 @@ body {
     --border: rgba(245, 188, 30, 0.3);
 }
 
+body {
+    min-height: 100vh;
+}
+
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* header/ */
+
+/* ============================================================
+   HEADER & NAV
+   ============================================================ */
+
+
 header {
     display: flex;
     position: sticky;
@@ -52,22 +56,22 @@ nav {
 
 .nav-left {
     display: flex;
-    flex-direction: row;
+    
     justify-content: center;
     align-items: center;
-
 }
 
 .logo {
-    border: 2px solid #F5BC1E;
+    border: 2px solid var(--gold);
+   
     width: 70px;
     height: 70px;
-    border-radius: 100%;
+    border-radius: 50%;
+   
 }
 
 .nav-left span h2 {
     color: var(--gold);
-
 }
 
 .nav-left span p {
@@ -76,20 +80,18 @@ nav {
 
 .nav-link {
     display: flex;
-
-
+  
 }
 
 .nav-link ul {
     display: flex;
-    flex-direction: row;
+    
     align-items: center;
     gap: 20px;
-
 }
 
 .nav-link ul li {
-    text-decoration: none;
+    
     list-style: none;
     color: var(--white);
 }
@@ -98,13 +100,11 @@ nav {
     color: var(--gold-light);
 }
 
-.nav-link ul li a:visited {
-    color: var(--gold-light);
-}
+
 
 .nav-right {
     display: flex;
-    flex-direction: row;
+
     gap: 20px;
     align-items: center;
     color: var(--gold);
@@ -117,11 +117,14 @@ nav {
     width: 80px;
     background-color: var(--gold-light);
     align-content: center;
-    border-radius: 15%;
+    border-radius: 8px;
+
 }
 
-/* hero */
 
+/* ============================================================
+   HERO
+   ============================================================ */
 .hero {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -140,9 +143,9 @@ nav {
 
 .hero-tag {
     font-size: 15.2px;
+  
     color: var(--text-light);
     padding-bottom: 30px;
-
 }
 
 .hero-tag::before,
@@ -150,58 +153,62 @@ nav {
     content: '✦';
 }
 
-
 .hero-left h1 {
-    color: white;
+    color: var(--white);
+    
     font-size: 51px;
 }
 
 .hero-left em {
     color: var(--gold);
-
 }
 
 .hero-left p {
-    color: #d4b896;
+    color: var(--text-light);
+   
 }
 
 .hero-btn {
-    margin: 40px;
+    margin: 40px 0;
+  
     display: flex;
-    flex-direction: row;
+   
     gap: 20px;
 }
 
 .hero-btn a {
     height: 50px;
     width: 110px;
-    border: 2px solid #F5BC1E;
+    border: 2px solid var(--gold);
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10%;
+    border-radius: 8px;
+   
 }
 
 .a-menu {
-    color: #F5BC1E;
+    color: var(--gold);
+    
 }
 
 .a-book {
-    background-color: #F5BC1E;
+    background-color: var(--gold);
+    
     font-weight: bold;
-
 }
 
 .hero-stats {
     display: flex;
-    flex-direction: row;
+    
     align-items: center;
     gap: 35px;
-
 }
 
 .hero-stats h3 {
-    color: #F5BC1E;
+    color: var(--gold);
+    
     font-size: 1.5rem;
 }
 
@@ -227,8 +234,7 @@ nav {
     width: 100%;
     height: 100%;
     border-radius: 10%;
-
-
+   
 }
 
 .hero-badge {
@@ -246,7 +252,6 @@ nav {
     top: -16px;
     right: -16px;
     font-weight: 700;
-
 
 }
 
@@ -273,7 +278,7 @@ nav {
 .hero-rate strong {
     font-size: 20px;
     color: var(--gold);
-
+   
 }
 
 .hero-rate span {
@@ -281,12 +286,16 @@ nav {
     margin: 10px;
 }
 
+
+/* ============================================================
+   OFFER BANNER
+   ============================================================ */
 .offer-section {
     background-color: var(--dark);
     border-top: 2px solid var(--border);
     border-bottom: 2px solid var(--border);
     display: flex;
-    flex-direction: row;
+    
     align-items: center;
     justify-content: space-around;
     color: var(--text-light);
@@ -303,28 +312,30 @@ nav {
     font-weight: 700;
     height: 40px;
     width: 120px;
-    border-radius: 10%;
+    border-radius: 8px;
+    
     background-color: var(--gold);
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-/* special-dishes// */
+
+/* ============================================================
+   SPECIAL DISHES
+   ============================================================ */
 
 .special-dishes {
     display: flex;
     flex-direction: column;
     background: var(--bg);
-    width: auto;
+
     align-items: center;
     gap: 25px;
     padding: 40px 0;
 }
 
 .title-line {
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -371,12 +382,14 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  
+    transition: all 0.2s;
 }
 
 .dishes-card:hover {
     border-color: var(--gold);
     transform: translateY(-4px);
-    transition: all 0.2s;
+    
 }
 
 
@@ -393,6 +406,7 @@ nav {
     object-fit: cover;
 }
 
+
 .order-btn {
     color: var(--bg);
     font-weight: 700;
@@ -404,6 +418,9 @@ nav {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    cursor: pointer;
+   
+    border: none;
 }
 
 .dishes-info h4 {
@@ -431,7 +448,11 @@ nav {
     padding: 10px;
 }
 
-/* why to choose us// */
+
+/* ============================================================
+   WHY CHOOSE US
+   ============================================================ */
+
 
 .why-to-choose {
     background-color: var(--dark);
@@ -440,14 +461,12 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .why-heading {
     color: var(--white);
     padding: 20px;
     font-size: 26px;
-
 }
 
 .why {
@@ -461,26 +480,25 @@ nav {
 
 .why-card {
 
-    height: auto;
     min-height: 150px;
     width: 100%;
     background-color: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 10px;
     display: flex;
-    flex-direction: row;
+    
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
     gap: 10px;
-
-
+   
+    transition: all 0.2s;
 }
 
 .why-card:hover {
     border-color: var(--gold);
     transform: translateY(-4px);
-    transition: all 0.2s;
+   
 }
 
 .why-img {
@@ -499,7 +517,8 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 10px 10px 0px;
+    padding: 0 10px 10px 0;
+   
 }
 
 .card-info h4 {
@@ -514,7 +533,9 @@ nav {
 }
 
 
-/* .chefs-special// */
+/* ============================================================
+   CHEF'S SPECIAL
+   ============================================================ */
 
 
 .chefs-special {
@@ -523,20 +544,18 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 20px;
-
 }
 
 .chefs-special-box {
     display: flex;
-    flex-direction: row;
+    
     justify-content: space-between;
     align-items: center;
     background-color: var(--card-bg);
-    height: auto;
+  
     width: 90%;
     padding: 20px;
     border: 1px solid var(--border);
-
 }
 
 .chefs-special-box-left {
@@ -550,7 +569,6 @@ nav {
     width: 465px;
     object-fit: cover;
     border-radius: 10%;
-
 }
 
 .special-badge {
@@ -569,7 +587,6 @@ nav {
     top: 197px;
     right: 1px;
 }
-
 
 .chefs-special-box-right {
     display: flex;
@@ -593,7 +610,11 @@ nav {
     font-size: 0.6rem;
 }
 
-/* review// */
+
+/* ============================================================
+   REVIEWS
+   ============================================================ */
+
 
 .review {
     background-color: var(--dark);
@@ -660,7 +681,6 @@ nav {
     font-size: 20px;
 }
 
-
 .review-star h2 {
     color: var(--gold);
 }
@@ -677,7 +697,6 @@ nav {
     justify-content: center;
     padding: 10px;
     transition: all 0.2s;
-
 }
 
 .review-card-big:hover {
@@ -689,7 +708,11 @@ nav {
     color: var(--text-light);
 }
 
-/* menu// */
+
+/* ============================================================
+   MENU
+   ============================================================ */
+
 
 .menu {
     background-color: var(--bg);
@@ -711,9 +734,12 @@ nav {
     min-height: 50px;
     background-color: transparent;
     border: 1px solid var(--border);
-    border-radius: 10%;
+    border-radius: 8px;
+    
     font-weight: 600;
     color: var(--text-light);
+    cursor: pointer;
+  
     transition: all 0.2s;
 }
 
@@ -728,9 +754,9 @@ nav {
 .menu-search {
     margin: 20px;
     width: 80%;
-
-
+   
 }
+
 
 .seach-bar {
     width: 97%;
@@ -749,11 +775,10 @@ nav {
     min-height: 30px;
     background: transparent;
     border: 1px solid var(--border);
-    border-radius: 10%;
+    border-radius: 8px;
+    
     cursor: pointer;
-
 }
-
 
 .menu-list,
 .menu-list-last {
@@ -770,7 +795,7 @@ nav {
 
 .menu-item h2 {
     color: var(--white);
-
+  
 }
 
 .menu-item p {
@@ -782,7 +807,10 @@ nav {
 }
 
 
-/* book// */
+/* ============================================================
+   BOOK A TABLE
+   ============================================================ */
+
 
 .book {
     background-color: var(--dark);
@@ -794,8 +822,9 @@ nav {
 }
 
 .book-form {
+   
     display: grid;
-    grid-template-columns: repeat(2, minmax(100%, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -811,13 +840,14 @@ nav {
 
 .form label {
     color: var(--text-light);
-    align-items: center;
+ 
 }
 
 .form input,
 .form select {
     background-color: var(--bg);
-    min-width: 100%;
+    
+    width: 100%;
     min-height: 50px;
     border: 1px solid var(--border);
     color: var(--white);
@@ -829,8 +859,7 @@ nav {
 }
 
 .submit-form {
-    min-width: 100%;
-    align-items: center;
+   
     margin: 20px;
     display: flex;
     align-items: center;
@@ -843,15 +872,19 @@ nav {
     font-weight: 600;
     font-size: 16px;
     color: var(--dark);
-    align-items: center;
+
     border: 1px solid var(--border);
     background-color: var(--gold);
+    cursor: pointer;
+   
 }
 
 
 
-/* footer// */
 
+/* ============================================================
+   FOOTER
+   ============================================================ */
 
 
 footer {
@@ -932,6 +965,11 @@ footer {
     line-height: 1.8;
 }
 
+
+.footer-col p + p {
+    margin-top: 12px;
+}
+
 .footer-bottom {
     border-top: 1px solid var(--border);
     padding-top: 20px;
@@ -945,12 +983,15 @@ footer {
 }
 
 
-
-/* media query// */
+/* ============================================================
+   MEDIA QUERIES
+   ============================================================ */
+/* CHANGED: "media query//" → section banner. */
 
 @media screen and (max-width: 800px) {
     .book-form {
-        grid-template-columns: repeat(1, minmax(100%, 1fr));
+      
+        grid-template-columns: repeat(1, 1fr);
         width: 100%;
     }
 
@@ -959,7 +1000,8 @@ footer {
     }
 
     .review-grid {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+       
+        grid-template-columns: 1fr;
         justify-items: center;
     }
 
@@ -979,16 +1021,12 @@ footer {
 }
 
 @media screen and (max-width: 490px) {
-
     .hero {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-columns: 1fr;
     }
 
-
     .footer-grid {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        background-color: #0e0604;
-
+        grid-template-columns: 1fr;
     }
 
     .chefs-special-box-left {
